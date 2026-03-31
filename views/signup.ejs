@@ -6,20 +6,26 @@
 </head>
 <body>
     <%- include('./partials/navbar') %>
-    <div id="form_container" class="w-50 m-auto pt-5">
-        <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Your Full Name">
-          </div>
-          <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Email</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Your Email">
-          </div>
-          <div class="mb-3">
-            <label for="formGroupExampleInput3" class="form-label">Password</label>
-            <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Enter Password">
-          </div>
-    </div>
+    <form id="form_container" class="w-50 m-auto pt-5" action="/user/signup" method="post">
+      <div class="mb-3">
+        <label for="full_name" class="form-label">Full Name</label>
+        <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Please enter your full name.">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Please enter your email.">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="password" placeholder="Please enter your password.">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </body>
 <%- include('./partials/scripts') %>
 </html>
