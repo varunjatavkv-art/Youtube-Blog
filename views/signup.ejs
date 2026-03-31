@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <%- include('./partials/head') %>
-    <title>Home Page</title>
+    <title>Signup</title>
 </head>
 <body>
     <%- include('./partials/navbar') %>
     <form id="form_container" class="w-50 m-auto pt-5" action="/user/signup" method="post">
       <div class="mb-3">
         <label for="full_name" class="form-label">Full Name</label>
-        <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Please enter your full name.">
+        <input type="text" name="fullName" class="form-control" id="full_name" placeholder="Please enter your full name.">
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email address</label>
@@ -19,10 +19,6 @@
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
         <input type="password" name="password" class="form-control" id="password" placeholder="Please enter your password.">
-      </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

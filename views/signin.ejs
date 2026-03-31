@@ -2,11 +2,22 @@
 <html lang="en">
 <head>
     <%- include('./partials/head') %>
-    <title>Home Page</title>
+    <title>Signin</title>
 </head>
 <body>
     <%- include('./partials/navbar') %>
-   
+    <form id="form_container" class="w-50 m-auto pt-5" action="/user/signin" method="post">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Please enter your email.">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" id="password" placeholder="Please enter your password.">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </body>
 <%- include('./partials/scripts') %>
 </html>
